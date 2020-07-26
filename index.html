@@ -9,15 +9,15 @@
     
 
     <script>
-        const RPS = {
-            0: "rock",
-            1: "paper",
-            2: "scissors"
-        };
+        const RPS = [
+            "rock",
+            "paper",
+            "scissors"
+        ];
         
         // Plays a random element
         function computerPlay() {
-            let comp_play = Math.floor(Math.random() * 3);
+            let comp_play = Math.floor(Math.random() * RPS.length);
             return comp_play;
         }
 
@@ -46,7 +46,7 @@
             usr_slct = usr_slct.toLocaleLowerCase();
             
             // TODO: Error handeling
-            return RPS[usr_slct];
+            return RPS.indexOf(usr_slct);
         }
 
         function game() {
@@ -58,6 +58,11 @@
             console.log(result);
         }
 
+        game();
+        game();
+        game();
+        game();
+        game();
         game();
 
     </script>
