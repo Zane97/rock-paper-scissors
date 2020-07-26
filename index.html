@@ -31,11 +31,11 @@
                 return `It's a tie, both selected ${RPS[plr_slct]}`;
             
             // Player win
-            } else if (outcome == 1 || outcome == 2){
+            } else if (outcome == 1 || outcome == -2){
                 return `You win, ${RPS[plr_slct]} beats ${RPS[cmptr_slct]}`;
             
             // Player loses
-            } else if (outcome == -1 || outcome == -2) {
+            } else if (outcome == -1 || outcome == 2) {
                 return `You lost, ${RPS[plr_slct]} looses against ${RPS[cmptr_slct]}`;
             }
         }
