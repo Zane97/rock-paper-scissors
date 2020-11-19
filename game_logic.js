@@ -41,8 +41,11 @@ function playerPlay() {
 
 function game(plr_slct) {
     console.log(plr_slct);
+
     let cmptr_slct = computerPlay();
     console.log(cmptr_slct);
+
     let result = round(plr_slct, cmptr_slct);
     console.log(result);
+    display_results(result);
 }
