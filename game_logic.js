@@ -39,18 +39,10 @@ function playerPlay() {
     return RPS.indexOf(usr_slct);
 }
 
-function game() {
-    let plr_slct = playerPlay();
+function game(plr_slct) {
     console.log(plr_slct);
     let cmptr_slct = computerPlay();
     console.log(cmptr_slct);
     let result = round(plr_slct, cmptr_slct);
     console.log(result);
 }
-
-game();
-game();
-game();
-game();
-game();
-game();
