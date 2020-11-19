@@ -30,14 +30,6 @@ function round(plr_slct, cmptr_slct) {
     }
 }
 
-// Get player input
-function playerPlay() {
-    let usr_slct = prompt("Rock Paper or Scissors");
-    usr_slct = usr_slct.toLocaleLowerCase();
-    
-    // TODO: Error handeling
-    return RPS.indexOf(usr_slct);
-}
 
 function game(plr_slct) {
     console.log(plr_slct);
