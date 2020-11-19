@@ -13,7 +13,7 @@ function round_complete(result){
     if(result == 1) score++;
     if(result == 2) score--;
     games_played ++;
-    console.log(`SCORE: ${score}`);
+    console.log(`SCORE: ${score}, MATCHES LEFT: ${games_amount - games_played}`);
 
     if(games_played >= games_amount){
         console.log("END OF GAME");
@@ -60,14 +60,11 @@ function round(plr_slct, cmptr_slct) {
 
 // Plays a single round 
 function game(plr_slct) {
-    console.log(`PLR_SLCT: ${plr_slct}`);
-
     let cmptr_slct = computerPlay();
-    console.log(`CMPTR_SLCT: ${cmptr_slct}`);
 
     let result = round(plr_slct, cmptr_slct);
     let result_msg = genOutputMsg(result, plr_slct, cmptr_slct);
-    console.log(`RESULT: ${result}`);
+    console.log(`PLR_SLCT: ${plr_slct}, CMPTR_SLCT: ${cmptr_slct}, RESULT: ${result}`);
     display_results(result_msg);
     round_complete(result)
 }
